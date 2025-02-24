@@ -1,12 +1,12 @@
 import unittest
 from unittest.mock import patch, Mock
 import json
-from Main import get_movies_by_popularity
+from main import get_movies_by_popularity
 from dotenv import load_dotenv
 
 
 class TestMovieAPIDataStructure(unittest.TestCase):
-    @patch("Main.requests.get")
+    @patch("main.requests.get")
     def test_api_response_structure(self, mock_get):
         load_dotenv()
         mock_response = Mock()
