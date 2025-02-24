@@ -1,8 +1,6 @@
 import unittest
-from unittest.mock import patch, Mock
-import json
-from main_module import get_movies_by_popularity, get_movie_names
-from dotenv import load_dotenv
+from main_module.movie_name_getter import get_movie_names
+
 
 class TestMovieNamesFunction(unittest.TestCase):
     def test_movie_name_function(self):

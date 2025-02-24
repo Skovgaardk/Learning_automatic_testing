@@ -32,10 +32,10 @@ def get_movie_names(movies):
 
 if __name__ == "__main__":
     load_dotenv()
-    movies = get_movies_by_popularity()
+    movies = Get_movies_by_popularity()
     data = json.loads(movies.text)
     movies = data['results']
-    movie_names = get_movie_names(movies)
+    movie_names = Get_movie_names(movies)
 
     print(movie_names)
 
