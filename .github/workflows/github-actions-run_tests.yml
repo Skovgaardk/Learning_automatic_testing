@@ -25,6 +25,9 @@ jobs:
       - name: Set environment variables
         run: echo "API_HEADER_AUTH=${{ secrets.API_HEADER_AUTH }}" >> $GITHUB_ENV
 
+      - name: Add project root to PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
+
       - name: Test with pytest
         run: |
           pip install pytest pytest-cov
