@@ -30,7 +30,7 @@ jobs:
       - name: Test with pytest
         run: |
           pip install pytest pytest-cov
-          pytest tests/ --doctest-modules --junitxml=junit/test-results.xml --cov=main_module.py --cov-report=xml
+          pytest tests/ --doctest-modules --junitxml=junit/test-results.xml --cov=main_module tests/ --cov-report=xml
 
   sonarqube:
     name: SonarQube
